@@ -1,0 +1,57 @@
+{
+  "name": "lazily-eager",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "scripts": {
+    "prebuild": "rm -Rf lib esm",
+    "build:docs": "typedoc --options typedoc.js",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc",
+    "build": "npm run build:cjs && npm run build:esm",
+    "prepublishOnly": "npm run build",
+    "prerelease": "npm run test:cov",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin master && npm publish",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:v": "jest --verbose",
+    "test:cov": "jest --verbose --coverage",
+    "test:new": "jest -o --verbose --coverage",
+    "test": "npm run test:cov"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "esm"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)$"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.2",
+    "@types/node": "^10.10.1",
+    "axios": "^0.18.0",
+    "babel-jest": "^23.6.0",
+    "coveralls": "^3.0.2",
+    "jest": "^23.6.0",
+    "rollup": "^0.66.1",
+    "standard-version": "^4.4.0",
+    "ts-jest": "^23.10.0",
+    "ts-node": "^7.0.1",
+    "typedoc": "^0.12.0",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "safe-types": "^4.6.2"
+  }
+}

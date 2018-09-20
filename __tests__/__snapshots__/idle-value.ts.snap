@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IdleValue should work 1`] = `"12/31/1969"`;
+
+exports[`IdleValue should work 2`] = `"12/31/1969"`;
+
+exports[`IdleValue should work 3`] = `"12/31/1969"`;
