@@ -21,7 +21,7 @@
     "test": "npm run test:cov"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alex Regan",
   "license": "MIT",
   "files": [
     "lib",
