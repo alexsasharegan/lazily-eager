@@ -23,6 +23,14 @@
   "keywords": [],
   "author": "Alex Regan",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexsasharegan/lazily-eager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexsasharegan/lazily-eager/issues"
+  },
+  "homepage": "https://github.com/alexsasharegan/lazily-eager#readme",
   "files": [
     "lib",
     "esm"
